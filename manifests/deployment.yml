@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: thomasegertonpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: thomasegertonpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: thomasegertonpipelinesjavascriptdocker 
+          image: eggscontainern2.azurecr.io/thomasegertonpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080

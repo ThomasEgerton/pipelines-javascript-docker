@@ -1,4 +1,11 @@
 # Docker
+- task: AzureRmWebAppDeployment@4
+  inputs:
+    ConnectionType: 'AzureRM'
+    azureSubscription: 'Egg Azure(0f71b673-ade1-4e7d-b9f8-2ce8cfe290a8)'
+    appType: 'webApp'
+    WebAppName: 'DOCKERTEST'
+    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
 # Build and push an image to Azure Container Registry
 # https://docs.microsoft.com/azure/devops/pipelines/languages/docker
 
